@@ -21,6 +21,10 @@ Here we will look, How we can create a new custom package or seprate module. Pro
    3. php artisan migrate
    4. php artisan serve
 
+## Donate
+Support my Goodwork by being sponsors and backers.
+Paypal: https://www.paypal.com/paypalme/jeetu226
+
 ## License
 
 The Laravel Custom Package is open-sourced  licensed under the [MIT license](https://opensource.org/licenses/MIT).
