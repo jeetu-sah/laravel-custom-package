@@ -1,0 +1,24 @@
+{
+    "name": "jeetu-sah/contact",
+    "description": "this is simple contact form package send email to admin also save data in database",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "JsWebsolutions\\Contact\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "jitendra sahu"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JsWebsolutions\\Contact\\ContactServiceProvider"
+            ]
+        }
+    }
+}
