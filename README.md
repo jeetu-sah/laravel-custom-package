@@ -14,6 +14,9 @@ Here we will look, How we can create a new custom package or seprate module. Pro
 
 ## Installation Process
    1. Clone the repository
+     
+    git clone https://github.com/jeetu-sah/laravel-custom-package.git
+    
    2. composer update
    3. php artisan migrate
    4. php artisan serve
