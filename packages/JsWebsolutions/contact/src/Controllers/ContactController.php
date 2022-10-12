@@ -2,6 +2,7 @@
 
 namespace JsWebsolutions\Contact\Controllers;
 use App\Http\Controllers\Controller;
+use JsWebsolutions\Contact\Requests\ContactRequest;
 
 use Illuminate\Http\Request;
 
@@ -24,7 +25,7 @@ class ContactController extends Controller
      */
     public function create()
     {
-        //
+       
     }
 
     /**
@@ -33,9 +34,10 @@ class ContactController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ContactRequest $request)
     {
-        //
+        echo "<pre>";
+        print_r(request()->all());exit;
     }
 
     /**

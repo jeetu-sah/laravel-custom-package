@@ -11,15 +11,20 @@
 <div class="container mt-5">
     <h3>Laravel Contact Form Package</h3>
     <hr />
-    <form action="/action_page.php" class="mt-5">
+    <form action="{{ route('contact.store') }}" class="mt-5" method="POST">
+        @csrf
         <div class="row">
             <div class="col">
                 <label for="name" class="form-label">Name:</label>
                 <input type="text" 
                     class="form-control" 
                     id="name" 
-                    placeholder="Enter name" 
+                    placeholder="Enter name"
+                    value="{{ old('name') }}"
                     name="name">
+                    @if($errors->has('name'))
+                        <div class="text-danger">{{ $errors->first('name') }}</div>
+                    @endif
             </div>
             <div class="col">
                 <label for="contact_number" class="form-label">Contact Number:</label>
@@ -27,7 +32,11 @@
                     class="form-control" 
                     id="contact_number" 
                     placeholder="Enter contact number" 
+                    value="{{ old('contact_number') }}"
                     name="contact_number">
+                @if($errors->has('contact_number'))
+                    <div class="text-danger">{{ $errors->first('contact_number') }}</div>
+                @endif
             </div>
         </div>
         <div class="row mt-3">
@@ -37,7 +46,11 @@
                     class="form-control" 
                     id="email" 
                     placeholder="Enter email" 
+                    value="{{ old('email') }}"
                     name="email" />
+                @if($errors->has('email'))
+                    <div class="text-danger">{{ $errors->first('email') }}</div>
+                @endif
             </div>
             <div class="col">
                 <label for="subject" class="form-label">Subject:</label>
@@ -45,7 +58,11 @@
                     class="form-control" 
                     id="subject" 
                     placeholder="Enter subject" 
+                    value="{{ old('subject') }}"
                     name="subject" />
+                @if($errors->has('subject'))
+                    <div class="text-danger">{{ $errors->first('subject') }}</div>
+                @endif
             </div>
         </div>
         <div class="row mt-3">
@@ -55,7 +72,10 @@
                     class="form-control" 
                     id="inquiry" 
                     placeholder="Enter Inquiry" 
-                    name="inquiry"></textarea>
+                    name="inquiry">{{ old('inquiry') }}</textarea>
+                @if($errors->has('inquiry'))
+                    <div class="text-danger">{{ $errors->first('inquiry') }}</div>
+                @endif
             </div>
         </div>
         <div class="row mt-3">
